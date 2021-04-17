@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Blog API
+  description: Beschreibung der API
+  license:
+    name: Unsere Lizenz
+
+servers:
+  - url: http://localhost:8080
+    description: Lokaler Test Server
+  - url: https://meinserver.de
+    description: Produktiv Server
+
+paths:
+  /posts:
+    get:
+      summary: Summary
+      description: das ist ein foo
+      operationId: operationId
+      tags:
+        - posts
+      parameters:
+        - name: tags
+          in: query
+          required: false
+          schema:
+            type: array
+            items:
+              type: string
+        - name: userIds
+          in: query
+          required: false
+
